@@ -90,10 +90,11 @@ const App: React.FC = () => {
     });
 
     const [settings, setSettings] = useState(() => {
-        // Priority: 1. Environment Variable (Vite/Prodcution) 2. Local Storage (Dev override)
+        // Priority: 1. Environment Variable (Vite/Production) 2. Local Storage (Dev override) 3. Hardcoded Default
         const envUrl = getEnv('GOOGLE_SCRIPT_URL');
         const savedUrl = localStorage.getItem('jws_script_url');
-        return { scriptUrl: envUrl || savedUrl || '' };
+        const defaultUrl = "https://script.google.com/macros/s/AKfycby7jUstvU54Q1wSFwfmv2L4iGO5wzUv6e7wBDGJC9XhK49ms3195aey-7qmy84jqd55/exec";
+        return { scriptUrl: envUrl || savedUrl || defaultUrl };
     });
     
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
