@@ -1,0 +1,8 @@
+{
+  "name": "PREMIUM Suit Order System",
+  "description": "A comprehensive order management system for wholesale suits, featuring measurement tracking, auto-sizing, print ticket generation, and email integration.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ]
+}
